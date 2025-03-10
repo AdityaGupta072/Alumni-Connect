@@ -11,7 +11,6 @@ mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopol
     .then(() => console.log("MongoDB Connected"))
     .catch(err => console.error("MongoDB Connection Error:", err));
 // Use Routes
-console.log("Added this message");
 app.use("/api/auth", authRoute);
 
 app.get("/", (req, res) => {
