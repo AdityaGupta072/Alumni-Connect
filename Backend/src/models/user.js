@@ -8,7 +8,8 @@ const UserSchema = new mongoose.Schema({
     institution: { type: String, required: true },
     graduationYear: {type:Number},
     profession: {type:String},
-    bio: {type:String}
+    bio: {type:String},
+    connections:[{type:mongoose.Schema.Types.ObjectId, ref:"User"}]  //followers and connections
 }, { timestamps: true });
 
 module.exports = mongoose.model("User", UserSchema);
